@@ -264,7 +264,7 @@ def Module_1(gpkg_filepath, XYZfile, GEOADMIN_BASE_URL,
 
 
     sidewalk_index_list, _ = xml.modify_type(district, ground_data, 
-                                                    groundtype=31, kfactor=0.1, SWR=0.4, 
+                                                   groundtype=31, kfactor=0.1, SWR=0.4, 
                                                     modif_data=sidewalk)
     ground_green_index_list, _ = xml.modify_type(district, ground_data, 
                                                  groundtype=3, kfactor=0.7, SWR=0.22, 
@@ -293,8 +293,6 @@ def Module_1(gpkg_filepath, XYZfile, GEOADMIN_BASE_URL,
         start_tid=next_tid, height=6.0, thickness=0.8)
     
 
-    print("Tarps surface count:", len(tarps_surfaces))
-    print(tarps_surfaces.head())
 
     next_tid = tarps_df['tid'].max() + 1  
 
@@ -531,7 +529,7 @@ def Module_KPI(results_production, volume_storage,
 ##################################################
 
 # Geopackage filepath
-gpkg_filepath = r"input/Conthey_3.gpkg"                                   #TODO
+gpkg_filepath = r"input/newMonthey_3.gpkg"                                   #TODO
 
 # Create geometry with swissbuildings3D
 create_geometry_3D = True                                    #TODO
@@ -552,9 +550,9 @@ xml_DHN = "DHN_"+xml_name
 
 # XML source files
 xml_base_file = r"xml_base.xml"                                
-climate_file = r"input/cli/Conthey_Contemporary_2025.cli"                                   #TODO
-horizon_file = r"input/cli/Conthey.hor"                                        #TODO
-XYZfile = r"input/Conthey.xyz"  #TODO    
+climate_file = r"input/cli/Monthey_Contemporary_2025.cli"                                   #TODO
+horizon_file = r"input/cli/Monthey.hor"                                        #TODO
+XYZfile = r"input/Monthey.xyz"  #TODO    
 
 # Scenarios to simulate
 scenarios_list = [1,2,3,4,5,6]                                  #TODO
