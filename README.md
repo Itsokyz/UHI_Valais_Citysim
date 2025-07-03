@@ -61,12 +61,7 @@ Before running `main_code.py`, modify the following parameters directly in the s
 - `climate_file = r"---.cli"`: Path to the climate file  
 - `horizon_file = r"---.hor"`: Path to the horizon file
 
-## Python libraries
-Required Python libraries are listed in `requirements.txt`. Install them with:
 
-```bash
-pip install -r requirements.txt
-```
 
 ## Results
 The generated `.xml` file is located in the directory specified by `directory_path`.  
@@ -83,7 +78,7 @@ CitySim simulations produce several result files, including three key indicators
   - Implementing baseline scenarios for UHI quantification  
   - Adding terrain around buildings to create continuous urban surfaces  
   - Integrating trees and pedestrians into simulations  
-  - Introducing new indicators for UHI quantification and pedestrian comfort
+ 
 
 ## Trees and pedestrian
 The inclusion of trees and pedestrians follows the methodology from Coccolo (2017):  
@@ -92,11 +87,8 @@ Points in the GeoPackage are converted to tree and pedestrian geometries in the 
 Pedestrian geometries are created specifically to compute Mean Radiant Temperature (MRT).
 
 ## UHI indicators
-Two new indicators were introduced to quantify UHIs, calculated for the warmest average annual day at maximum temperature:
 
-- **Surface Temperature (Ts)**: Represents surface heating  
-- **Sol-air Temperature (Tsol-air)**: Captures convective heat exchange and the effects of air temperature and solar radiation  
-  https://en.wikipedia.org/wiki/Sol-air_temperature
+**Surface Temperature (Ts)**: Represents surface heating  
 
 ## Pedestrian comfort indicators
 The **Universal Thermal Climate Index (UTCI)** is used for its relevance across diverse climates.  
